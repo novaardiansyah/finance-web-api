@@ -1,0 +1,56 @@
+{
+  "related-information": {
+    "composer-install": {
+      "command": "composer install",
+      "description": "Install dependencies from composer.lock",
+      "url": "https://getcomposer.org/doc/03-cli.md#install"
+    },
+    "composer-reload-autoload": {
+      "command": "composer dump-autoload",
+      "description": "Regenerate the autoloader",
+      "url": "https://getcomposer.org/doc/03-cli.md#dump-autoload"
+    }
+  },
+  "search-information": {
+    "issues": [
+      {
+        "title": "Call to undefined method MY_Loader::_ci_object_to_array()",
+        "url": "https://stackoverflow.com/questions/41557760/codeigniter-hmvc-object-to-array-error"
+      },
+      {
+        "title": "strpos(): Non-string needles will be interpreted as strings in the future. Use an explicit chr() call to preserve the current behavior | MX/Router.php:239",
+        "url": "https://www.initekno.com/error-di-router-codeigniter-versi-3-1-10-dan-php-7/",
+        "solution": "replace with 'if ($suffix && strpos($class, $suffix) === FALSE)'"
+      },
+      {
+        "title": "Error: MySQL Shutdown Unexpectedly.",
+        "ur": "https://stackoverflow.com/questions/18022809/how-to-solve-error-mysql-shutdown-unexpectedly"
+      },
+      {
+        "title": "Error: Xampp Control Panel Is Not Showing.",
+        "ur": "https://stackoverflow.com/questions/46627164/xampp-control-panel-is-not-showing"
+      },
+      {
+        "title": "Header authentication in PHP was blocked by Apache",
+        "url": "",
+        "solution": "Open the httpd.conf file on Apache XAMPP then add this code at the bottom:",
+        "code": [
+          "<IfModule proxy_module>",
+          "SetEnvIf Authorization \"(.*)\" HTTP_AUTHORIZATION=$1",
+          "ProxyPassMatch ^/(.*\\.php)$ fcgi://127.0.0.1:9000/usr/local/apache2/htdocs/$1",
+          "ProxyTimeout 1800",
+          "</IfModule>"
+        ]
+      },
+      {
+        "title": "JWT Decode Returning Kid Unable to Lookup Correct Key",
+        "url": "https://stackoverflow.com/questions/72278051/why-is-jwtdecode-returning-status-kid-empty-unable-to-lookup-corr",
+        "solution": "see the code below",
+        "code": [
+          "use Firebase\\JWT\\Key;",
+          "JWT::decode($token, new Key($topSecret, 'HS256'));"
+        ]
+      }
+    ]
+  }
+}
